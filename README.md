@@ -19,4 +19,4 @@ Vue.use(InstaPost)
 />
 ```
 
-<img src="./demo.png"/>
+<img src="./demo.png" width="381"/>
