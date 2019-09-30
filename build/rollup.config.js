@@ -55,7 +55,7 @@ if (!argv.format || argv.format === 'es') {
   const esConfig = {
     ...baseConfig,
     output: {
-      file: 'dist/vue-instagram-post.esm.js',
+      file: 'dist/vue-insta-post.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -79,9 +79,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-instagram-post.ssr.js',
+      file: 'dist/vue-insta-post.ssr.js',
       format: 'cjs',
-      name: 'VueInstagramPost',
+      name: 'InstaPost',
       exports: 'named',
       globals,
     },
@@ -106,9 +106,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-instagram-post.min.js',
+      file: 'dist/vue-insta-post.min.js',
       format: 'iife',
-      name: 'VueInstagramPost',
+      name: 'InstaPost',
       exports: 'named',
       globals,
     },
