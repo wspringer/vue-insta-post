@@ -19,4 +19,4 @@ Vue.use(InstaPost)
 />
 ```
 
-![Sample output](./demo.png)
+<img src="./demo.png"/>
