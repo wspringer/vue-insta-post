@@ -18,3 +18,5 @@ Vue.use(InstaPost)
   @like="{like handler}"
 />
 ```
+
+![Sample output](./demo.png)
