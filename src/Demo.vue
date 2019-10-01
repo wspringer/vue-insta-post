@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <insta-post
+      class="responsive"
+      responsive="true"
       avatar="https://scontent.fams1-2.fna.fbcdn.net/v/t1.0-1/p480x480/46216836_10215668229471510_264073753502154752_n.jpg?_nc_cat=101&_nc_oc=AQluFqJgI29pth96CYuNyC-NfzPswSm9Q6IJnAB7PkHoLOzjwAoCAVe8AgYeySL0irQ&_nc_ht=scontent.fams1-2.fna&oh=ddf11ec474b04a980708a2340605d33b&oe=5E35582E"
       handle="dartingtonarts"
       status="Totnes St Mary Church"
       :likes="likes"
-      img-src="https://instagram.fams1-2.fna.fbcdn.net/vp/b22f417ad1bdb0d08f937851b555c4d2/5E3D205F/t51.2885-15/e35/51545982_829939757341825_7408881662271874792_n.jpg?_nc_ht=instagram.fams1-2.fna.fbcdn.net&_nc_cat=101"
+      img-src="https://instagram.fams1-2.fna.fbcdn.net/vp/a568e49c0a47941199ce600c60ad5294/5E1B5D1B/t51.2885-15/e35/71319495_1404228989731453_3686260001289200731_n.jpg?_nc_ht=instagram.fams1-2.fna.fbcdn.net&_nc_cat=101"
       @like="like"
     />
   </div>
@@ -48,6 +50,9 @@ body {
 }
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+body {
+  margin: 20px 0;
 }
 </style>
 

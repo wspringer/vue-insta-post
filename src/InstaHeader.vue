@@ -25,6 +25,10 @@ export default {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
   color: #262626;
+  border-bottom: 1px solid #efefef;
+  @media(-webkit-min-device-pixel-ratio: 2) {
+    border-bottom-width: .5px;
+  }
 }
 .insta-profile-picture {
   grid-column: 1/2;

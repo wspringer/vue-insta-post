@@ -31,13 +31,20 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .insta-post {
-  border-radius: 3px;
-  border: 1px solid #e6e6e6;
   max-width: 600px;
   background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  &.responsive {
+    @media(max-width: 600px) {
+      background-color: inherit;
+      border: 0;
+    }
+  }
 }
+
 .insta-image {
   height: 0;
   padding-top: 100%;
