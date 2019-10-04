@@ -1,6 +1,6 @@
 {
   "name": "vue-insta-post",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "dist/vue-insta-post.ssr.js",
   "module": "dist/vue-insta-post.esm.js",
