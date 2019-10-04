@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .insta-header {
   display: grid;
   grid-template-columns: 64px auto;

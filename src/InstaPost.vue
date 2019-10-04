@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .insta-post {
   max-width: 600px;
   background-color: #fff;

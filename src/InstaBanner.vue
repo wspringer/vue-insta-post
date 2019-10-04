@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .insta-banner {
     display: grid;
     grid-template-columns: 40px 40px auto 40px;
