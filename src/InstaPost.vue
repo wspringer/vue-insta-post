@@ -5,7 +5,10 @@
       :handle="handle"
       :status="status"
     )
-    .insta-image(v-if="imgSrc" :style="{ backgroundImage: 'url(' + imgSrc + ')' }")
+    .insta-image(v-show="imgSrc && (!videoSrc || !playing)" :style="{ backgroundImage: 'url(' + imgSrc + ')' }")
+    .insta-video(v-show="videoSrc && (playing || !imgSrc)")
+      video(v-if="videoSrc" ref="video" loop)
+        source(:src="videoSrc")
     insta-banner(:likes="likes" @like="like")
 </template>
 
@@ -19,10 +22,27 @@ export default {
     'handle',
     'status',
     'imgSrc',
-    'likes'
+    'videoSrc',
+    'likes',
+    'playing'
   ],
   methods: {
     like () { this.$emit('like') }
+  },
+  watch: {
+    playing: {
+      immediate: true,
+      handler (playing) {
+        if (this.$refs.video) {
+          if (playing) {
+            this.$refs.video.currentTime = 0
+            this.$refs.video.play()
+          } else {
+            this.$refs.video.pause()
+          }
+        }
+      }
+    }
   },
   components: {
     InstaHeader,
@@ -45,11 +65,22 @@ export default {
   }
 }
 
-.insta-image {
+.insta-image, .insta-video {
   height: 0;
   padding-top: 100%;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
+}
+.insta-video {
+  position: relative;
+}
+.insta-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
