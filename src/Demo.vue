@@ -12,8 +12,8 @@
       video-src="https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm"
       @like="like"
     />
-    <button @click="play">Play</button>
-    <button @click="pause">Pause</button>
+    <button @click="play" v-if="!playing">Play</button>
+    <button @click="pause" v-if="playing">Pause</button>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       likes: 3,
-      playing: false
+      playing: true
     }
   },
   methods: {

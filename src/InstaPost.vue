@@ -7,7 +7,7 @@
     )
     .insta-image(v-show="imgSrc && (!videoSrc || !playing)" :style="{ backgroundImage: 'url(' + imgSrc + ')' }")
     .insta-video(v-show="videoSrc && (playing || !imgSrc)")
-      video(v-if="videoSrc" ref="video" loop)
+      video(v-if="videoSrc" ref="video" loop muted)
         source(:src="videoSrc")
     insta-banner(:likes="likes" @like="like")
 </template>
@@ -29,20 +29,18 @@ export default {
   methods: {
     like () { this.$emit('like') }
   },
-  watch: {
-    playing: {
-      immediate: true,
-      handler (playing) {
-        if (this.$refs.video) {
+  mounted () {
+    // Wait for refs to be there
+    this.$watch('playing', (playing) => {
+      if (this.$refs.video) {
           if (playing) {
             this.$refs.video.currentTime = 0
             this.$refs.video.play()
           } else {
             this.$refs.video.pause()
           }
-        }
       }
-    }
+    }, { immediate: true })
   },
   components: {
     InstaHeader,
