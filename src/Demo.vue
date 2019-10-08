@@ -9,7 +9,7 @@
       :playing="playing"
       :likes="likes"
       img-src="https://instagram.fams1-2.fna.fbcdn.net/vp/a568e49c0a47941199ce600c60ad5294/5E1B5D1B/t51.2885-15/e35/71319495_1404228989731453_3686260001289200731_n.jpg?_nc_ht=instagram.fams1-2.fna.fbcdn.net&_nc_cat=101"
-      video-src="https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm"
+      video-src="//a.storyblok.com/f/67106/x/362df9d0cd/19958812_748302055364303_7631233076181336064_n.mp4"
       @like="like"
     />
     <button @click="play" v-if="!playing">Play</button>

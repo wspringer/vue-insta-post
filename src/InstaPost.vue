@@ -7,8 +7,7 @@
     )
     .insta-image(v-show="imgSrc && (!videoSrc || !playing)" :style="{ backgroundImage: 'url(' + imgSrc + ')' }")
     .insta-video(v-show="videoSrc && (playing || !imgSrc)")
-      video(v-if="videoSrc" ref="video" loop muted playinsline)
-        source(:src="videoSrc")
+      video(v-if="videoSrc" :src="videoSrc" ref="video" playsinline loop muted)
     insta-banner(:likes="likes" @like="like")
 </template>
 
